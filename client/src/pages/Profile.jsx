@@ -224,7 +224,7 @@ export default function Profile() {
     };
   
     fetchAllUsers();
-  }, [handleListingDelete,handleDeleteUserByAdmin]);
+  },[]);
   
   return (
     <div className="p-3 max-w-lg mx-auto">

@@ -5,6 +5,8 @@ import { Navigation } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import 'swiper/css/bundle';
 import ListingItem from '../components/ListingItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
   const [offerListings, setOfferListings] = useState([]);
@@ -129,6 +131,117 @@ export default function Home() {
           </div>
         )}
       </div>
+      {/* Footer Section
+      <footer className='bg-slate-800 text-white py-6'>
+        <div className='max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center'>
+          <div className='mb-4 md:mb-0'>
+            <h3 className='text-xl font-semibold'>Elite Estate</h3>
+            <p className='text-gray-400'>© 2024 All rights reserved.</p>
+          </div>
+          <div className='flex flex-col md:flex-row gap-4'>
+            <Link to={'/about'} className='text-gray-300 hover:text-white'>About Us</Link>
+            <Link to={'/contact'} className='text-gray-300 hover:text-white'>Contact</Link>
+            <Link to={'/terms'} className='text-gray-300 hover:text-white'>Terms of Service</Link>
+            <Link to={'/privacy'} className='text-gray-300 hover:text-white'>Privacy Policy</Link>
+          </div>
+        </div>
+      </footer> */}
+      {/* Footer Section */}
+      <footer className="bg-gradient-to-r from-blue-900 to-slate-800 text-white py-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+          {/* Footer Column 1 - Brand Info */}
+          <div className="mb-4">
+            <h3 className="text-3xl font-bold text-white mb-3">Elite Estate</h3>
+            <p className="text-gray-300">
+              Your trusted real estate partner. Find your next dream home or
+              perfect property with us.
+            </p>
+            <p className="text-gray-400 mt-4">© 2024 All rights reserved.</p>
+          </div>
+
+          {/* Footer Column 2 - Links */}
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-3">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to={"/about"}
+                  className="text-gray-300 hover:text-white transition duration-300"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/contact"}
+                  className="text-gray-300 hover:text-white transition duration-300"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/terms"}
+                  className="text-gray-300 hover:text-white transition duration-300"
+                >
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/privacy"}
+                  className="text-gray-300 hover:text-white transition duration-300"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Footer Column 3 - Social Media */}
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-3">
+              Follow Us
+            </h3>
+            <div className="flex space-x-4">
+              <a
+                href="https://facebook.com"
+                className="text-gray-300 hover:text-white transition duration-300"
+              >
+                <FontAwesomeIcon icon={faFacebookF} size="2x" />
+              </a>
+              <a
+                href="https://twitter.com"
+                className="text-gray-300 hover:text-white transition duration-300"
+              >
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+              </a>
+              <a
+                href="https://instagram.com"
+                className="text-gray-300 hover:text-white transition duration-300"
+              >
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                className="text-gray-300 hover:text-white transition duration-300"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Bottom Bar */}
+        <div className="border-t border-gray-600 mt-8 pt-4">
+          <div className="text-center text-gray-400">
+            Built with ❤️ by Elite Estate Team
+          </div>
+        </div>
+      </footer>
+
     </div>
   );
 }

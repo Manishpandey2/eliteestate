@@ -5,3 +5,9 @@
 body{
     background-color: rgb(241, 245, 241);
 }
+
+.background-image{
+    background: url('./assets/hero.jpg');
+    background-position: center;
+    background-size: cover;
+}
